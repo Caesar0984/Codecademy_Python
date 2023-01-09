@@ -1,0 +1,9 @@
+def fib_finder(n):
+  fib = [0, 1]
+  for i in range(1, n + 1):
+    result = fib[i - 1] + fib[i]
+    fib.append(result)
+  return fib[n - 1]
+
+x = input()
+print(fib_finder(x))
