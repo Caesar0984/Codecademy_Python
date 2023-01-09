@@ -1,0 +1,18 @@
+def stats_finder(array):
+  n = 0
+  total = 0
+  frequency = [0] * (max(array) + 1)
+  
+  for i in array:
+    n += 1
+    total += i
+    frequency[i] += 1
+  mean = total / n
+  
+  for i in array:
+    if frequency[i] == max(frequency):
+      mode = i
+  
+  return [mean, mode]
+
+print(stats_finder([500, 400, 400, 375, 300, 350, 325, 300]))
