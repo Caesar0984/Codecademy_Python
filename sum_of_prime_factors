@@ -1,0 +1,17 @@
+def sum_of_prime_factors(n):
+  result = list()
+  prime_factor = list()
+  for i in range(1, n + 1):
+    if n % i == 0:
+      result.append(i)
+  for i in result:
+    cnt = 0
+    for j in range(1, max(result) + 1):
+      if i % j == 0:
+        cnt += 1
+    if cnt == 2:
+      prime_factor.append(i)
+  return sum(prime_factor)
+
+x = input()
+print(sum_of_prime_factors(x))
