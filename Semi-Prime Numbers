@@ -17,4 +17,5 @@ def semi_prime_count(n):
 
   return scnt
 
-print(semi_prime_count(34))
+x = input()
+print(semi_prime_count(x))
